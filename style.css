@@ -1,0 +1,207 @@
+body{
+    margin:0;
+    padding:0;
+font-family:  sans-serif , Helvetica,Arial;
+}
+
+/* //////////////HEADING ////////////////*/
+.header{
+    background-color: rgb(172, 193, 231);
+    box-shadow: 6px 6px 12px rgb(20, 20, 20);
+    z-index: 1;
+}
+.heading{
+    font-size: 22px;
+    font-weight: 700;
+}
+/*\\\\\\\\\\\\\\\\\\\ index\ \\\\\\\\\\\\\\\\\\\\\\\*/
+.logo{
+    margin: 30px auto;
+    width: 250px;
+    height: 250px;
+}
+.info-sub-heading{
+    margin: 20px auto;
+font-size: 20px;
+font-weight: 700;
+}
+ul>li{
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+}
+.names{
+    width: 200px;
+    margin: 5px;
+}
+
+/* ////////////////SOLUTION///////////////////////////// */
+/* matrix design */
+.matrix-container{
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p-matrix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* lines */
+.matrix{
+    margin: 30px auto;
+    width: fit-content !important;
+border-left: 2px solid black;
+border-right: 2px solid black;
+}
+/* row */
+.r1,.r2,.r3{
+    display: flex;
+    justify-content: space-between;   
+    outline: none;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+/* value */
+.r1>div,.r2>div,.r3>div{
+    margin: 5px 5px 5px 5px;
+    width: 100px;
+    max-width: 300px;
+    min-width: 50px;
+}
+.invariant-stresses{
+    margin: 50px auto !important;
+}
+.principal-stresses{
+    margin: 50px auto !important;
+}
+/* wrtiting */
+.sub-heading{
+font-size: 20px;
+font-weight: 800;
+text-decoration: underline;
+}
+.result-sub-heading{
+    font-size: 18px;
+    font-weight: 750;
+    text-decoration: underline;
+    }
+.write{
+    font-size: 16px;
+    font-weight: 650; 
+    margin: 5px auto;  
+}
+/* cond Solving */
+.cond-heading{
+    font-size: 18px;
+    font-weight: 700;
+margin: 30px auto;
+}
+/* cosine result */
+.resultCos{
+font-size: 16px;
+font-weight: 700;
+border: 3px solid black;
+width: fit-content;
+padding: 10px;
+margin: 20px auto;
+}
+/*/////////////////////// INPUT //////////////////////////*/
+.input-container{
+   background-image: url('pics/input.png');
+    height: 100vh;
+    background-size: cover;
+}
+.input{
+    padding: 10px 10px;
+background-color: rgba(15, 16, 97, 0.7);
+box-shadow: 7px 7px 14px black;
+box-sizing: border-box;
+}
+.input-heading{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+.x,.y,.z,.yx,.yz,.zx{
+    color:white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-error{
+color: rgb(247, 236, 236);
+font-weight: 600;
+font-size: 18px;
+margin: 10x auto !important;
+}
+.input-value{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0px 0px 0px;
+    content: none;
+    border: none;
+    outline: none;
+    color: white;
+    background: transparent;
+ border-bottom: 2px solid rgb(192, 184, 184);
+ width: 150px;
+ padding: 5px;
+ margin: 0px 10px;
+}
+.solution-btn{
+    margin: 10px;
+}
+.solution-btn > .btn{
+font-size: 18px;
+padding: 10px;
+font-weight: 500;
+    color: white !important;
+}
+/* GO BACK */
+/* input */
+.input-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.go-back-container{
+    position: relative !important;
+left: 200px !important;
+}
+.input-go-back{ 
+    margin: 20px;
+    color: rgb(247, 228, 228) !important;
+    font-weight: 500;
+    padding: 15px 5px 15px 5px;
+    font-size: 18px;
+}
+
+/* solution */
+.sol-go-back{
+    width:100px;
+    height: 40px;
+    position: fixed !important;
+    bottom: 40px;
+    border-radius: 20px !important;
+    right: 10px;
+}
+.sol-go-back-conatainer>a{
+    color: black !important;
+    font-size: 14px !important;
+    font-weight: 700;
+}
+
+
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRESS TENSOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5ddbba803e.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: rgb(226, 238, 250);"> 
+
+<div class="main-container col-lg-12 col-md-12 col-sm-12 col-12">
+
+    <div class="header col-lg-12 col-md-10 col-sm-10 col-12 text-center py-3 m-auto ">
+    <div class="container">
+    <div class="heading">
+        PRINCIPAL STRESSES AND DIRECTION COSINES
+    </div>
+</div>
+</div>
+
+
+
+<div class="matrix-container col-lg-12 col-md-12 col-sm-12 col-12 ">
+    <div class="container"> 
+    <!-- line -->
+    <div class="matrix col-lg-3 col-lg-3 col-lg-10 col-12 ">
+        <div class="r1">
+       <div>&#963;<sub>x</sub></div>
+       <div>&#932;<sub>xy</sub></div>
+       <div>&#932;<sub>xz</sub></div>
+       </div>
+       
+       <div class="r2">
+       <div>&#932;<sub>xy</sub></div>
+       <div>&#963;<sub>y</sub></div>
+       <div>&#932;<sub>yz</sub></div>
+        </div>
+       
+        <div class="r3">
+       <div>&#932;<sub>zx</sub></div>
+       <div>&#932;<sub>zy</sub></div>
+       <div>&#963;<sub>z</sub></div>
+           </div>
+           </div>
+<div class="matrix col-lg-3 col-lg-3 col-lg-10 col-12 " id="matrix">    
+<div class="r1"></div>
+<div class="r2"></div>
+<div class="r3"></div>
+</div>
+</div>
+    </div>
+
+
+<div class="solution-container col-lg-12 col-md-12 col-sm-12 col-12 ">
+    <div class="container">
+
+<div class="invariant-stresses">
+    <h5 class="sub-heading">INVARIANT STRESSES:</h5>
+<p class="write" id="i1">I<sub>1</sub> = &#963;<sub>x</sub> + &#963;<sub>y</sub> + &#963;<sub>z</sub> </p>
+
+<p class="write" id="i2">I<sub>2</sub> = &#963;<sub>x</sub> &#963;<sub>y</sub> + &#963;<sub>y</sub> &#963;<sub>z</sub> + &#963;<sub>z</sub> &#963;<sub>x</sub> - ( &#932;<sub>xy</sub><sup>2</sup> + &#932;<sub>yz</sub><sup>2</sup> + &#932;<sub>zx</sub><sup>2</sup> ) </p>
+
+<p class="write" id="i3">I<sub>3</sub> = &#963;<sub>x</sub> &#963;<sub>y</sub> &#963;<sub>z</sub> + 2 X (  &#932;<sub>xy</sub> + &#932;<sub>yz</sub> + &#932;<sub>zx</sub> ) - ( &#963;<sub>x</sub>  &#932;<sub>yz</sub><sup>2</sup> + &#963;<sub>y</sub>  &#932;<sub>zx</sub> <sup>2</sup> + &#963;<sub>z</sub>  &#932;<sub>xy</sub><sup>2</sup> ) </p>
+</div>
+
+<div class="principal-stresses">
+    <h5 class="sub-heading">PRINCIPAL STRESSES:</h5>
+    <p class="write"> &#963;<sub>n</sub><sup>3</sup> - I<sub>1</sub> &#963;<sub>n</sub><sup>2</sup> + I<sub>2</sub> &#963;<sub>n</sub> - I<sub>3</sub> = 0 </p>
+    <div class="result1">
+       <p class="write" id="s1" >&#963;<sub>1</sub> = </p>
+       <p class="write" id="s2">&#963;<sub>2</sub> = </p>
+       <p class="write" id="s3">&#963;<sub>3</sub> = </p>
+       <p class="write my-3 "> CONDITION :  <strong>&#963;<sub>1</sub> > &#963;<sub>2</sub> > &#963;<sub>3</sub></strong></p>
+    </div>
+</div>
+
+
+<div class="cond-p col-lg-12 col-md-12 col-sm-12 col-12" id="cond-p">
+    <h5 class="sub-heading" >DIRECTION COSINES</h5>
+    <div class="info-sub-heading text-left mt-5 col-lg-12 col-lg-10 col-lg-10 col-12">
+        GENERAL FORM :
+      </div>
+      
+    <div class="p-matrix">
+    <div class="matrix col-lg-6 col-md-6 col-sm-6 col-6 ">
+        <div class="r1">
+       <div>&#963;<sub>x</sub> - &#963;<sub>n</sub></div>
+       <div>&#932;<sub>xy</sub></div>
+       <div>&#932;<sub>xz</sub></div>
+       </div>
+       
+       <div class="r2">
+       <div>&#932;<sub>xy</sub></div>
+       <div>&#963;<sub>y</sub> - &#963;<sub>y</sub></div>
+       <div>&#932;<sub>yz</sub></div>
+        </div>
+       
+        <div class="r3">
+       <div>&#932;<sub>zx</sub></div>
+       <div>&#932;<sub>zy</sub></div>
+       <div>&#963;<sub>z</sub> - &#963;<sub>n</sub></div>
+           </div>
+           </div>
+
+           <div class="matrix col-lg-2 col-md-2 col-sm-2 col-2 ml-3  " >
+            <div class="r1 ">
+           <div style="max-width:100% ; min-width: 100%;">l</div>
+           </div>
+           
+           <div class="r2" >
+           <div style="max-width:100% ; min-width: 100%;">m</div>
+            </div>
+           
+            <div class="r3">
+           <div style="max-width:100% ; min-width: 100%;">n</div>
+               </div>
+               </div>
+
+               <div class="r1">
+                   <div style="width: 20px;">= 0</div>
+               </div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>    
+
+<div class="info-sub-heading col-lg-12 col-md-10 col-sm-10 col-12 text-center my-5" style="text-decoration: underline;">THANK YOU FOR USING THIS APP ! 
+</div>
+
+<div class="sol-go-back-continer ">
+    <a href="input.html"><button class="sol-go-back btn btn-outline-primary">GO BACK </button></a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.core.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.js"></script> <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Calculus.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Solve.js"></script>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
