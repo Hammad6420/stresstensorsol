@@ -21,17 +21,13 @@ function solution(){
     }else{
         window.location.href = 'solution.html'
     }
-tensor()
-invariants()
-principal()
-solveCond()
 }
-
-
 tensor()
 invariants()
 principal()
 solveCond()
+
+
 
 
 function tensor(){
@@ -134,8 +130,18 @@ for (let index = 0; index < 3; index++) {
 condTest()
 
  //solve a system of nonlinear equations
+if ( (((npr1[0]/npr2[1])*npr2[0] + npr1[0]) == 0 || ((npr1[0]/npr2[1])*npr2[0] - npr1[0] ) == 0) && (((npr1[0]/npr2[1])*npr2[1] + npr1[1]) == 0 || ((npr1[0]/npr2[1])*npr2[1] - npr1[1] ) == 0) && (((npr1[0]/npr2[1])*npr2[2] + npr1[2]) == 0 || ((npr1[0]/npr2[1])*npr2[2] - npr1[2] ) == 0) ) {
+    cosA = ['Undefined','Undefined','Undefined']
+    console.log(cosA)
+}else if (npr1[0]!=0 && npr1[1]==0 && npr1[2]==0 ) {
+    cosA = nerdamer.solveEquations([`${npr1[0]} * x + ${npr1[1]} * y + ${npr1[2]} * z=0`, ` ${npr2[0]} * x + ${npr2[1]} * y+ ${npr2[2]} * z=0`, `y^2+z^2=1`]);    
+}else if (npr1[0]==0 && npr1[1]!=0 && npr1[2]==0 ) {
+    cosA = nerdamer.solveEquations([`${npr1[0]} * x + ${npr1[1]} * y + ${npr1[2]} * z=0`, ` ${npr2[0]} * x + ${npr2[1]} * y+ ${npr2[2]} * z=0`, `x^2+z^2=1`]);    
+}else if (npr1[0]==0 && npr1[1]==0 && npr1[2]!=0 ) {
+    cosA = nerdamer.solveEquations([`${npr1[0]} * x + ${npr1[1]} * y + ${npr1[2]} * z=0`, ` ${npr2[0]} * x + ${npr2[1]} * y+ ${npr2[2]} * z=0`, `x^2+y^2=1`]);    
+}else{
  cosA = nerdamer.solveEquations([`${npr1[0]} * x + ${npr1[1]} * y + ${npr1[2]} * z=0`, ` ${npr2[0]} * x + ${npr2[1]} * y+ ${npr2[2]} * z=0`, `x^2+y^2+z^2=1`]); 
-console.log(cosA)
+}
 cosineResult()
 }
 num=1;
@@ -173,7 +179,13 @@ function condTest(){
 
 var num=1;
 function cosineResult(){
-
+    // infinity cond
+if (cosA[0]=='Undefined') {
+    document.getElementById('cond-p').innerHTML +=  ` 
+    <div class="resultCos text-center" ><div class='result-sub-heading'>${numStr[num-1]} PRINCIPAL AXIS DIRECTED ALONG UNIT VECTOR N <sub>${num}</sub> : </div> N<sub>${num}</sub> =  ${cosA[0]} i + ${cosA[1]} j + ${cosA[2]} k </div>
+    `
+}else{
+// other cond test
     if ((cosA[0][1]<0 && cosA[1][1]<0) || (cosA[1][1]<0 && cosA[2][1]<0) || (cosA[2][1]<0 && cosA[0][1]<0)) {
 
         if (cosA[0][1]<0 && cosA[1][1]<0) {
@@ -211,6 +223,7 @@ if (cosA[0][1]<0) {
     document.getElementById('cond-p').innerHTML +=  ` 
     <div class="resultCos text-center" ><div class='result-sub-heading'>${numStr[num-1]} PRINCIPAL AXIS DIRECTED ALONG UNIT VECTOR N <sub>${num}</sub> : </div> N<sub>${num}</sub> =  <u>+</u> ${cosA[0][1].toFixed(5)} i <u>+</u> ${cosA[1][1].toFixed(5)} j <u>+</u> ${cosA[2][1].toFixed(5)} k </div>
     `  
+}
 }
     num = num +1;
 }
